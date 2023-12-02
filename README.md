@@ -1,6 +1,9 @@
 # vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+Esse é um projeto construído em vue.js , que apresenta um CRUD de Produtos consumidos da api do repositório:
+```bash
+https://github.com/andersontrombini/api_lv.git
+```
 
 ## Recommended IDE Setup
 
