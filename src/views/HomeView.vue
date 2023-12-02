@@ -5,7 +5,7 @@
       <hr>
       <p>This is the home page</p>
       <hr>
-      <p>Clique on Products to see the list of products</p>
+      <p>Click on Products to see the list of products</p>
     </div>
   </main>
 </template>

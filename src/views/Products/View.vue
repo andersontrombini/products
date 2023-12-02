@@ -21,12 +21,14 @@
                         <tr v-for="product in products" :key="product.id">
                             <td class="text-center">{{ product.id }}</td>
                             <td class="text-center">{{ product.name }}</td>
-                            <td class="text-center">{{ product.price + ' $'}}</td>
+                            <td class="text-center">{{ product.price + ' $' }}</td>
                             <td class="text-center">{{ product.description }}</td>
                             <td class="text-center">{{ formatDate(product.created_at) }}</td>
                             <td class="text-center">
-                                <router-link :to="'/products/' + product.id + '/edit/'" class="btn btn-primary mx-2">Edit</router-link>
-                                <button type="button" @click="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+                                <router-link :to="'/products/' + product.id + '/edit/'"
+                                    class="btn btn-primary mx-2">Edit</router-link>
+                                <button type="button" @click="deleteProduct(product.id)"
+                                    class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
                     </tbody>
@@ -69,7 +71,7 @@ export default {
 
         deleteProduct(id) {
             const apiUrl = `http://127.0.0.1:8000/api/products/${id}`;
-            
+
             axios.delete(apiUrl).then(res => {
                 this.getProducts();
             }).catch(error => {
@@ -86,6 +88,6 @@ export default {
 
 <style scoped>
 .table-container {
-  max-height: 500px; 
+    max-height: 500px;
 }
 </style>

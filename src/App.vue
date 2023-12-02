@@ -4,7 +4,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -26,7 +25,6 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
       </nav>
     </div>
-
   </header>
 
   <RouterView />

@@ -14,8 +14,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input v-model="model.product.price" placeholder="0.00" type="text" class="form-control" id="price" :mask="['###.###.###,##']">
-                    <!-- <input id="tel" class="input" type="tel" placeholder="(62) 98888-7777" v-mask="['(##) ####-####', '(##) #####-####']"> -->
+                    <input v-model="model.product.price" placeholder="0.00" type="text" class="form-control" id="price">
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
@@ -35,7 +34,6 @@
 import axios from 'axios'
 
 export default {
-
     name: 'ProductsCreate',
     data() {
         return {
@@ -61,7 +59,6 @@ export default {
                 this.errorList = [];
 
                 this.$router.push({ name: 'products' });
-
             }).catch(error => {
                 this.errorList = error.response ? error.response.data.errors : [];
                 console.error('Error when registering product:', error);
